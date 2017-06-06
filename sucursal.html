@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Panel Atención al Público</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="css/plugins/chartist.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="blogtitle_globo.png" alt="">
+                  Chile Express
+                </a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Claudio Fernandez <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Configuración</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://www.ceryx.cl/SeidorInnovacion/Prototipos/EjemploTotemChileExpress/inicio.php"><i class="fa fa-arrow-circle-left"></i> Volver</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a class="btn btn-primary" href="index.html"><i class="fa fa-fw fa-dashboard"></i> Inicio</a>
+                    </li>
+                    <li class="active">
+                        <a class="btn btn-primary" href="oficinas.html"><i class="fa fa-fw fa-table"></i> Oficinas</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-primary" href="display.html"><i class="fa fa-fw fa-desktop"></i> Display</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Oficinas <small>Listado de Sucursales</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-table"></i> Oficina
+                            </li>
+                            <li>
+                                PARQUE ARAUCO
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Contenido -->
+                <div class="row">
+                  <div class="col-xs-12 graph-content">
+                    <div>
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#lunes">Lunes</a></li>
+                        <li><a href="#martes">Martes</a></li>
+                        <li><a href="#miercoles">Miercoles</a></li>
+                        <li><a href="#jueves">Jueves</a></li>
+                        <li><a href="#viernes">Viernes</a></li>
+                        <li><a href="#sabado">Sabado</a></li>
+                        <li><a href="#semana">Semana</a></li>
+                      </ul>
+
+                      <div class="row">
+                        <ul id="select-charts">
+                          <li class="active"><a href="#" class="btn btn-primary me-link" id="espera">Tiempos de Espera</a></li>
+                          <li><a href="#" class="btn btn-primary me-link" id="atencion">Tiempos de Atención</a></li>
+                        </ul>
+                      </div>
+
+
+                      <div id="charts" class="tab-content">
+                        <div class="row" id="tiempo-espera" style="visibility:visible:position:relative;padding-bottom:100px">
+                          <div class="col-xs-8 animated zoomIn">
+                            <div id="graph1"></div>
+                          </div>
+                          <div class="col-xs-4 animated zoomIn">
+                            <div class="legend">
+                              <h3>Tiempos de Espera</h3>
+                              <p><i class="fa fa-circle" style="color:#3ea033" aria-hidden="true"></i> Menores a 8 minuteos</p>
+                              <p><i class="fa fa-circle" style="color:#ffff00" aria-hidden="true"></i> Entre 8 y 16 minuto</p>
+                              <p><i class="fa fa-circle" style="color:#ff0000" aria-hidden="true"></i> Mayores a 16 minutos</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row" id="tiempo-atencion" style="visibility:hidden:position:fixed;margin-bottom:100px">
+                          <div class="col-xs-8 animated zoomIn">
+                            <div id="graph2"></div>
+                          </div>
+                          <div class="col-xs-4 animated zoomIn">
+                            <div class="legend">
+                              <h3>Tiempos de Atención</h3>
+                              <p><i class="fa fa-circle" style="color:#3ea033" aria-hidden="true"></i> Menores a 8 minuteos</p>
+                              <p><i class="fa fa-circle" style="color:#ffff00" aria-hidden="true"></i> Entre 8 y 16 minuto</p>
+                              <p><i class="fa fa-circle" style="color:#ff0000" aria-hidden="true"></i> Mayores a 16 minutos</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.js"></script>
+    <!-- <script src="js/plugins/morris/morris-data.js"></script> -->
+    <!-- <script src="js/plugins/chartist/chartist.min.js"></script> -->
+    <!-- Flot Charts JavaScript -->
+    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+    <!-- <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/flot-data.js"></script> -->
+
+    <script type="text/javascript">
+      var lunes = [
+      {"Horas": "9:00", "high": 85, "medium": 8, "low": 7},
+      {"Horas": "10:00", "high": 75, "medium": 15, "low": 10},
+      {"Horas": "11:00", "high": 70, "medium": 22, "low": 8},
+      {"Horas": "12:00", "high": 68, "medium": 17, "low": 15},
+      {"Horas": "13:00", "high": 40, "medium": 33, "low": 27},
+      {"Horas": "14:00", "high": 45, "medium": 38, "low": 17},
+      {"Horas": "15:00", "high": 60, "medium": 33, "low": 7},
+      {"Horas": "16:00", "high": 75, "medium": 15, "low": 10},
+      {"Horas": "17:00", "high": 80, "medium": 12, "low": 8},
+      {"Horas": "18:00", "high": 49, "medium": 33, "low": 18},
+      {"Horas": "19:00", "high": 38, "medium": 32, "low": 30}
+      ];
+      Morris.Line({
+      element: 'graph1',
+      data: lunes,
+      xkey: 'Horas',
+      xlabels: "hour",
+      ykeys: ['high', 'medium', 'low'],
+      lineColors: ['#3ea033', '#ffff00', '#ff0000'],
+      labels: ['Menores a 8 minuteos', 'Entre 8 y 16 minutos', 'Mayores a 16 minutos'],
+      postUnits:'%',
+      parseTime: false
+      });
+    </script>
+
+    <script type="text/javascript">
+      var atencion = [
+      {"Horas": "9:00", "high": 80, "medium": 13, "low": 7},
+      {"Horas": "10:00", "high": 75, "medium": 15, "low": 10},
+      {"Horas": "11:00", "high": 70, "medium": 22, "low": 8},
+      {"Horas": "12:00", "high": 68, "medium": 17, "low": 15},
+      {"Horas": "13:00", "high": 40, "medium": 33, "low": 27},
+      {"Horas": "14:00", "high": 45, "medium": 38, "low": 17},
+      {"Horas": "15:00", "high": 60, "medium": 33, "low": 7},
+      {"Horas": "16:00", "high": 75, "medium": 15, "low": 10},
+      {"Horas": "17:00", "high": 80, "medium": 12, "low": 8},
+      {"Horas": "18:00", "high": 49, "medium": 33, "low": 18},
+      {"Horas": "19:00", "high": 38, "medium": 32, "low": 30}
+      ];
+      Morris.Line({
+      element: 'graph2',
+      data: atencion,
+      xkey: 'Horas',
+      xlabels: "hour",
+      ykeys: ['high', 'medium', 'low'],
+      lineColors: ['#3ea033', '#ffff00', '#ff0000'],
+      labels: ['Menores a 8 minuteos', 'Entre 8 y 16 minutos', 'Mayores a 16 minutos'],
+      postUnits:'%',
+      parseTime: false
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#select-charts').on('click', 'a.me-link', function(e){
+          e.preventDefault();
+          console.log("click");
+          $('div#charts').find('div[id^=tiempo]').each(function(){
+            $(this).css('visibility', 'hidden').css('position', 'fixed');
+          });
+          var attr = $(this).attr('id');
+          $('#'+'tiempo-'+attr).css('visibility', 'visible').css('position', 'relative');
+          $(this).closest('#select-charts').find('li').removeClass('active');
+          $(this).closest('li').addClass('active');
+        });
+      });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Panel Atención al Público</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="blogtitle_globo.png" alt="">
+                  Chile Express
+                </a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Claudio Fernandez <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Configuración</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://www.ceryx.cl/SeidorInnovacion/Prototipos/EjemploTotemChileExpress/inicio.php"><i class="fa fa-arrow-circle-left"></i> Volver</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a class="btn btn-primary" href="index.html"><i class="fa fa-fw fa-dashboard"></i> Inicio</a>
+                    </li>
+                    <li class="active">
+                        <a class="btn btn-primary" href="oficinas.html"><i class="fa fa-fw fa-table"></i> Oficinas</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-primary" href="display.html"><i class="fa fa-fw fa-desktop"></i> Display</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Oficinas <small>Listado de Sucursales</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-table"></i> Oficinas
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Contenido -->
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="table-responsive">
+                      <table class="table main-table">
+                        <tr>
+                          <tr class="first" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" style="cursor:pointer">
+                            <td width="30%">
+                              <strong>ISIDORA GOYENECHEA</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Región Metropolitana</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Las Condes</strong>
+                            </td>
+                            <td colspan="1" align="right">
+                              <i class="fa fa-times-circle indicador text-low" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Sucrursal en Línea"></i>
+                              <i class="fa fa-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Espera"></i>
+                              <i class="fa fa-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Atención"></i>
+                            </td>
+                          </tr>
+                          <tr class="second" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1" style="cursor:pointer">
+                            <td colspan="1"><strong>Tiempo de espera promedio: </strong> <span id="">4:21</span></td>
+                            <td colspan="1"><strong>Tiempo de atencion promedio: </strong> <span id="">2:10</span></td>
+                            <td colspan="2"><strong>Coordinador: </strong> <span id="">Claudio Suarez  </span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding:0" colspan="4">
+                              <div class="collapse" id="collapseExample1">
+                                <span class="table-title">
+                                  Lstado de Cajas
+                                </span>
+                                  <div class="table-responsive">
+                                    <table class="table text-center">
+                                      <thead bgcolor="#000" style="color:#FFF;background-color:#000;">
+                                        <th style="text-align:center!important">Caja N°</th>
+                                        <th style="text-align:center!important">Operador</th>
+                                        <th style="text-align:center!important">Situación</th>
+                                        <th style="text-align:center!important">Atendiendo</th>
+                                        <th style="text-align:center!important">T. en Caja</th>
+                                        <th style="text-align:center!important">Inicio Turno</th>
+                                        <th style="text-align:center!important">Chat</th>
+                                      </thead>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>01</td>
+                                        <td>Juan Perez</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B441</td>
+                                        <td>2:10:14</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>02</td>
+                                        <td>Camila Garcia</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B442</td>
+                                        <td>1:21:30</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>03</td>
+                                        <td>--</td>
+                                        <td>DESCONECTADA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222!important">
+                                        <td>04</td>
+                                        <td>Juan Perez</td>
+                                        <td>DISPONIBLE</td>
+                                        <td>B443</td>
+                                        <td>1:15:50</td>
+                                        <td>9:30</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                    </table>
+                                  </div>
+                                  <a href="sucursal.html" class="btn btn-table pull-right">
+                                    Ver detalles de Oficina
+                                  </a>
+                                  <a href="#" class="btn btn-table pull-right">
+                                    Listado de Tickets
+                                  </a>
+                                </div>
+                                </td>
+
+                              </tr>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table main-table">
+                        <tr>
+                          <tr class="first" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" style="cursor:pointer">
+                            <td width="30%">
+                              <strong>APUMANQUE DOS</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Región Metropolitana</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Las Condes</strong>
+                            </td>
+                            <td colspan="1" align="right">
+                              <i class="fa fa-check-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Sucrursal en Línea"></i>
+                              <i class="fa fa-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Espera"></i>
+                              <i class="fa fa-circle indicador text-medium" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Atención"></i>
+                            </td>
+                          </tr>
+                          <tr class="second" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" style="cursor:pointer">
+                            <td colspan="1"><strong>Tiempo de espera promedio: </strong> <span id="">4:21</span></td>
+                            <td colspan="1"><strong>Tiempo de atencion promedio: </strong> <span id="">2:10</span></td>
+                            <td colspan="2"><strong>Coordinador: </strong> <span id="">Claudio Suarez</span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding:0" colspan="4">
+                              <div class="collapse" id="collapseExample2">
+                                <span class="table-title">
+                                  Lstado de Cajas
+                                </span>
+                                  <div class="table-responsive">
+                                    <table class="table text-center">
+                                      <thead bgcolor="#000" style="color:#FFF;background-color:#000;">
+                                        <th style="text-align:center!important">Caja N°</th>
+                                        <th style="text-align:center!important">Operador</th>
+                                        <th style="text-align:center!important">Situación</th>
+                                        <th style="text-align:center!important">Atendiendo</th>
+                                        <th style="text-align:center!important">T. en Caja</th>
+                                        <th style="text-align:center!important">Inicio Turno</th>
+                                        <th style="text-align:center!important">Chat</th>
+                                      </thead>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>01</td>
+                                        <td>Juan Perez</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B441</td>
+                                        <td>2:10:14</td>
+                                        <td>8:45</td>
+                                        <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td>
+                                      </tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>02</td>
+                                        <td>Camila Garcia</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B442</td>
+                                        <td>1:21:30</td>
+                                        <td>8:45</td>
+                                        <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      </tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>03</td>
+                                        <td>--</td>
+                                        <td>DESCONECTADA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222!important">
+                                        <td>04</td>
+                                        <td>Juan Perez</td>
+                                        <td>DISPONIBLE</td>
+                                        <td>B443</td>
+                                        <td>1:15:50</td>
+                                        <td>9:30</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                    </table>
+                                  </div>
+                                  <a href="sucursal.html" class="btn btn-table pull-right">
+                                    Ver detalles de Oficina
+                                  </a>
+                                </div>
+                                </td>
+
+                              </tr>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table main-table">
+                        <tr>
+                          <tr class="first" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3" style="cursor:pointer">
+                            <td width="30%">
+                              <strong>SUBCENTRO ESCUELA MILITAR</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Región Metropolitana</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Las Condes</strong>
+                            </td>
+                            <td colspan="1" align="right">
+                              <i class="fa fa-check-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Sucrursal en Línea"></i>
+                              <i class="fa fa-circle indicador text-low" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Espera"></i>
+                              <i class="fa fa-circle indicador text-medium" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Atención"></i>
+                            </td>
+                          </tr>
+                          <tr class="second" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3" style="cursor:pointer">
+                            <td colspan="1"><strong>Tiempo de espera promedio: </strong> <span id="">4:21</span></td>
+                            <td colspan="1"><strong>Tiempo de atencion promedio: </strong> <span id="">2:10</span></td>
+                            <td colspan="2"><strong>Coordinador: </strong> <span id="">Claudio Suarez</span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding:0" colspan="4">
+                              <div class="collapse" id="collapseExample3">
+                                <span class="table-title">
+                                  Lstado de Cajas
+                                </span>
+                                  <div class="table-responsive">
+                                    <table class="table text-center">
+                                      <thead bgcolor="#000" style="color:#FFF;background-color:#000;">
+                                        <th style="text-align:center!important">Caja N°</th>
+                                        <th style="text-align:center!important">Operador</th>
+                                        <th style="text-align:center!important">Situación</th>
+                                        <th style="text-align:center!important">Atendiendo</th>
+                                        <th style="text-align:center!important">T. en Caja</th>
+                                        <th style="text-align:center!important">Inicio Turno</th>
+                                        <th style="text-align:center!important">Chat</th>
+                                      </thead>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>01</td>
+                                        <td>Juan Perez</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B441</td>
+                                        <td>2:10:14</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>02</td>
+                                        <td>Camila Garcia</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B442</td>
+                                        <td>1:21:30</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>03</td>
+                                        <td>--</td>
+                                        <td>DESCONECTADA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222!important">
+                                        <td>04</td>
+                                        <td>Juan Perez</td>
+                                        <td>DISPONIBLE</td>
+                                        <td>B443</td>
+                                        <td>1:15:50</td>
+                                        <td>9:30</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                    </table>
+                                  </div>
+                                  <a href="sucursal.html" class="btn btn-table pull-right">
+                                    Ver detalles de Oficina
+                                  </a>
+                                </div>
+                                </td>
+
+                              </tr>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table main-table">
+                        <tr>
+                          <tr class="first" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4" style="cursor:pointer">
+                            <td width="30%">
+                              <strong>PARQUE ARAUCO</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Región Metropolitana</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Las Condes</strong>
+                            </td>
+                            <td colspan="1" align="right">
+                              <i class="fa fa-check-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Sucrursal en Línea"></i>
+                              <i class="fa fa-circle indicador text-low" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Espera"></i>
+                              <i class="fa fa-circle indicador text-medium" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Atención"></i>
+                            </td>
+                          </tr>
+                          <tr class="second" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4" style="cursor:pointer">
+                            <td colspan="1"><strong>Tiempo de espera promedio: </strong> <span id="">4:21</span></td>
+                            <td colspan="1"><strong>Tiempo de atencion promedio: </strong> <span id="">2:10</span></td>
+                            <td colspan="2"><strong>Coordinador: </strong> <span id="">Claudio Suarez</span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding:0" colspan="4">
+                              <div class="collapse" id="collapseExample4">
+                                <span class="table-title">
+                                  Lstado de Cajas
+                                </span>
+                                  <div class="table-responsive">
+                                    <table class="table text-center">
+                                      <thead bgcolor="#000" style="color:#FFF;background-color:#000;">
+                                        <th style="text-align:center!important">Caja N°</th>
+                                        <th style="text-align:center!important">Operador</th>
+                                        <th style="text-align:center!important">Situación</th>
+                                        <th style="text-align:center!important">Atendiendo</th>
+                                        <th style="text-align:center!important">T. en Caja</th>
+                                        <th style="text-align:center!important">Inicio Turno</th>
+                                        <th style="text-align:center!important">Chat</th>
+                                      </thead>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>01</td>
+                                        <td>Juan Perez</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B441</td>
+                                        <td>2:10:14</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>02</td>
+                                        <td>Camila Garcia</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B442</td>
+                                        <td>1:21:30</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>03</td>
+                                        <td>--</td>
+                                        <td>DESCONECTADA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222!important">
+                                        <td>04</td>
+                                        <td>Juan Perez</td>
+                                        <td>DISPONIBLE</td>
+                                        <td>B443</td>
+                                        <td>1:15:50</td>
+                                        <td>9:30</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                    </table>
+                                  </div>
+                                  <a href="sucursal.html" class="btn btn-table pull-right">
+                                    Ver detalles de Oficina
+                                  </a>
+                                </div>
+                                </td>
+
+                              </tr>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table main-table">
+                        <tr>
+                          <tr class="first" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5" style="cursor:pointer">
+                            <td width="30%">
+                              <strong>FLEMING</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Región Metropolitana</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Las Condes</strong>
+                            </td>
+                            <td colspan="1" align="right">
+                              <i class="fa fa-check-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Sucrursal en Línea"></i>
+                              <i class="fa fa-circle indicador text-low" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Espera"></i>
+                              <i class="fa fa-circle indicador text-medium" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Atención"></i>
+                            </td>
+                          </tr>
+                          <tr class="second" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5" style="cursor:pointer">
+                            <td colspan="1"><strong>Tiempo de espera promedio: </strong> <span id="">4:21</span></td>
+                            <td colspan="1"><strong>Tiempo de atencion promedio: </strong> <span id="">2:10</span></td>
+                            <td colspan="2"><strong>Coordinador: </strong> <span id="">Claudio Suarez</span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding:0" colspan="4">
+                              <div class="collapse" id="collapseExample5">
+                                <span class="table-title">
+                                  Lstado de Cajas
+                                </span>
+                                  <div class="table-responsive">
+                                    <table class="table text-center">
+                                      <thead bgcolor="#000" style="color:#FFF;background-color:#000;">
+                                        <th style="text-align:center!important">Caja N°</th>
+                                        <th style="text-align:center!important">Operador</th>
+                                        <th style="text-align:center!important">Situación</th>
+                                        <th style="text-align:center!important">Atendiendo</th>
+                                        <th style="text-align:center!important">T. en Caja</th>
+                                        <th style="text-align:center!important">Inicio Turno</th>
+                                        <th style="text-align:center!important">Chat</th>
+                                      </thead>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>01</td>
+                                        <td>Juan Perez</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B441</td>
+                                        <td>2:10:14</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>02</td>
+                                        <td>Camila Garcia</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B442</td>
+                                        <td>1:21:30</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>03</td>
+                                        <td>--</td>
+                                        <td>DESCONECTADA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222!important">
+                                        <td>04</td>
+                                        <td>Juan Perez</td>
+                                        <td>DISPONIBLE</td>
+                                        <td>B443</td>
+                                        <td>1:15:50</td>
+                                        <td>9:30</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                    </table>
+                                  </div>
+                                  <a href="sucursal.html" class="btn btn-table pull-right">
+                                    Ver detalles de Oficina
+                                  </a>
+                                </div>
+                                </td>
+                              </tr>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table main-table">
+                        <tr>
+                          <tr class="first" role="button" data-toggle="collapse" href="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6" style="cursor:pointer">
+                            <td width="30%">
+                              <strong>EL BOSQUE NORTE</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Región Metropolitana</strong>
+                            </td>
+                            <td width="30%">
+                              <strong>Las Condes</strong>
+                            </td>
+                            <td colspan="1" align="right">
+                              <i class="fa fa-check-circle indicador text-high" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Sucrursal en Línea"></i>
+                              <i class="fa fa-circle indicador text-low" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Espera"></i>
+                              <i class="fa fa-circle indicador text-medium" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tiempos de Atención"></i>
+                            </td>
+                          </tr>
+                          <tr class="second" role="button" data-toggle="collapse" href="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6" style="cursor:pointer">
+                            <td colspan="1"><strong>Tiempo de espera promedio: </strong> <span id="">4:21</span></td>
+                            <td colspan="1"><strong>Tiempo de atencion promedio: </strong> <span id="">2:10</span></td>
+                            <td colspan="2"><strong>Coordinador: </strong> <span id="">Claudio Suarez</span></td>
+                          </tr>
+                          <tr>
+                            <td style="padding:0" colspan="4">
+                              <div class="collapse" id="collapseExample6">
+                                <span class="table-title">
+                                  Lstado de Cajas
+                                </span>
+                                  <div class="table-responsive">
+                                    <table class="table text-center">
+                                      <thead bgcolor="#000" style="color:#FFF;background-color:#000;">
+                                        <th style="text-align:center!important">Caja N°</th>
+                                        <th style="text-align:center!important">Operador</th>
+                                        <th style="text-align:center!important">Situación</th>
+                                        <th style="text-align:center!important">Atendiendo</th>
+                                        <th style="text-align:center!important">T. en Caja</th>
+                                        <th style="text-align:center!important">Inicio Turno</th>
+                                        <th style="text-align:center!important">Chat</th>
+                                      </thead>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>01</td>
+                                        <td>Juan Perez</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B441</td>
+                                        <td>2:10:14</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>02</td>
+                                        <td>Camila Garcia</td>
+                                        <td>ATENDIENDO</td>
+                                        <td>B442</td>
+                                        <td>1:21:30</td>
+                                        <td>8:45</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222">
+                                        <td>03</td>
+                                        <td>--</td>
+                                        <td>DESCONECTADA</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                      <tr style="border-bottom: 1px solid #222!important">
+                                        <td>04</td>
+                                        <td>Juan Perez</td>
+                                        <td>DISPONIBLE</td>
+                                        <td>B443</td>
+                                        <td>1:15:50</td>
+                                        <td>9:30</td>
+                                      <td><i class="fa fa-comments" aria-hidden="true" data-toggle="modal" data-target="#modalDerivarTicket" style="cursor:pointer"></i></td></tr>
+                                    </table>
+                                  </div>
+                                  <a href="sucursal.html" class="btn btn-table pull-right">
+                                    Ver detalles de Oficina
+                                  </a>
+                                </div>
+                              </td>
+                            </tr>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalDerivarTicket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #ffb81c">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title chx_fuente" style="font-family: 'Open Sans'; font-size: 25px; font-weight: 900;" id="myModalLabel"><span class="glyphicon glyphicon-comment"></span><span class="username"> Juan Perez</span></h4>
+          </div>
+	        <div id="chats" class="modal-body">
+            <div class="chat-window col-xs-12" id="chat_window_1">
+              <div class="toHide">
+                <div class="chat-body">
+                  <div class="row msg msg-sent">
+                    <div class="col-xs-10">
+                      <div class="msg-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                      <div class="profile-pic">
+                        <img class="img-responsive img-rounded" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row msg msg-sent">
+                    <div class="col-xs-10">
+                      <div class="msg-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                      <div class="profile-pic">
+                        <img class="img-responsive img-rounded" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row msg msg-sent">
+                    <div class="col-xs-10">
+                      <div class="msg-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                      <div class="profile-pic">
+                        <img class="img-responsive img-rounded" src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <div class="modal-footer">
+           <div class="chat-footer">
+              <div class="input-group">
+                <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Escriba un mensaje al operador..." />
+                <span class="input-group-btn">
+                  <button class="btn btn-sm" id="btn-chat">Enviar</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+    <script type="text/javascript">
+      $('[data-toggle="tooltip"]').tooltip();
+    </script>
+
+</body>
+
+</html>
